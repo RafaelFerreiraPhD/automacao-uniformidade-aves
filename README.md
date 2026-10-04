@@ -1,55 +1,75 @@
-# 🐔 Sistema de Automação Zootécnica: Uniformidade de Lotes e Curvas de Crescimento
+# 🐔 Automação Zootécnica: Monitoramento de Uniformidade e Crescimento de Aves
 
-Aplicação em **Microsoft Excel e VBA** concebida para automatizar a gestão biométrica de aves (corte e postura), validação de regras de amostragem em galpão e acompanhamento de curvas padrão de linhagens comerciais.
-
----
-
-## 🎯 Contexto e Desafio Operacional
-A dispersão de pesos num lote avícola tem impacto direto na conversão alimentar, no rendimento de carcaça e na pontualidade do pico de postura. O processo tradicional de pesagem em papel ou em folhas de cálculo sem validação manual acarreta atrasos de cálculo e omissão de amostras representativas. 
-
-Esta aplicação atua como um sistema integrado que valida as amostras recolhidas, calcula os índices biométricos instantaneamente e orienta a tomada de decisão técnica.
+Ferramenta desenvolvida em **Excel e VBA** para automatizar a pesagem semanal, checagem de regras de amostragem no galpão, cálculo de uniformidade e comparação com as curvas dos manuais de linhagens.
 
 ---
 
-## 📸 Demonstração do Sistema
+## 🎯 Por que esta planilha foi criada?
 
-| Painel de Controlo & Desempenho | Recolha e Validação de Pesagens |
-| :---: | :---: |
-| ![Painel de Controlo](img/painel_controle.png) | ![Registo de Pesagem](img/nova_coleta.png) |
+Na rotina da granja, a pesagem semanal costuma ser anotada em pranchetas ou planilhas sem travas de validação. Isso gera erros de digitação, amostras insuficientes e demora para calcular indicadores básicos como desvio padrão e CV%. 
 
----
+Além disso, lotes desuniformes exigem ação rápida no arraçoamento e ambiência antes que a conversão alimentar ou a curva de postura sejam prejudicadas.
 
-## ⚙️ Principais Funcionalidades
-
-1. **Registo Controlado de Lote:**
-   - Registo inicial do lote (identificação, linhagem, categoria e número de aves alojadas) com indexação automática às tabelas de referência técnica.
-2. **Auditoria Biométrica na Recolha:**
-   - Verificação em tempo real da regra de amostragem (mínimo de 100 aves ou 1% da população total).
-   - Bloqueio de inserções incompletas ou datas inválidas.
-3. **Métricas Zootécnicas Calculadas:**
-   - **Peso Médio e Desvio Padrão ($\sigma$)**
-   - **Coeficiente de Variação (CV%)**
-   - **Percentagem de Uniformidade** na tolerância configurável (padrão $\pm 10\%$ da média):
-     $$\text{Uniformidade (\%)} = \left( \frac{\text{Aves no intervalo } [0.9 \cdot \bar{P},\, 1.1 \cdot \bar{P}]}{\text{Total de aves pesadas}} \right) \times 100$$
-4. **Arquitetura de Navegação Dinâmica:**
-   - Utilização do estado `xlSheetVeryHidden` para apresentar apenas o ecrã ativo, protegendo as fórmulas e bases de dados contra edições indevidas.
-5. **Base Histórica Estruturada:**
-   - Gravação cronológica com tipagem e formatação numérica rigorosa para futuras auditorias e integração com ferramentas de Business Intelligence (Power BI).
+Esta ferramenta foi feita para resolver esse gargalo:
+- O operador digita o peso individual e a planilha valida se a amostragem atingiu o mínimo representativo.
+- Os cálculos de uniformidade (faixa de ±10%) e médias saem na hora.
+- Os dados são salvos em um histórico geral estruturado para futuras análises.
+- A tela esconde as abas de retaguarda para não deixar fórmulas expostas a cliques acidentais.
 
 ---
 
-## 📂 Organização dos Scripts VBA
+## 📸 Demonstração da Planilha
 
-O código fonte está modularizado na pasta [`/src`](./src):
-* **[`src/GestaoLotesEPesagens.bas`](./src/GestaoLotesEPesagens.bas):** Rotinas `SalvarNovoLote()` e `ChecarResultadosESalvar()` — gestão de fluxos de entrada e validações de dados.
-* **[`src/NavegacaoSistema.bas`](./src/NavegacaoSistema.bas):** Rotina `NavegarPara()` — controlo de interface e transições de ecrã.
-* **[`src/ConfiguracoesEAdmin.bas`](./src/ConfiguracoesEAdmin.bas):** Construção dinâmica de layout e módulo `ResetarSistema()` com autenticação por palavra-passe.
+<div align="center">
+
+### Painel de Controle (Resultados e Curvas)
+<img src="./img/painel_controle.png" alt="Painel de Controle" width="850">
+
+<br><br>
+
+### Coleta e Validação de Pesagens
+<img src="./img/nova_coleta.png" alt="Nova Coleta de Pesagem" width="850">
+
+</div>
 
 ---
 
-## 🚀 Como Utilizar
-1. Descarregue a folha de cálculo disponível em [`app/Automacao_Uniformidade_Aves.xlsm`](./app/).
-2. Abra o ficheiro no Microsoft Excel e clique em **Habilitar Macros**.
-3. No menu principal, inicie pelo registo do lote na aba **NOVO LOTE**.
-4. Prossiga para a inserção das pesagens semanais na aba **NOVA COLETA**.
-5. Clique em **CHECAR RESULTADO E SALVAR** para atualizar os gráficos do **PAINEL DE CONTROLE**.
+## ⚙️ O que a ferramenta faz
+
+1. **Cadastro do Lote:**
+   - Registra data de alojamento, categoria (corte ou postura) e linhagem[cite: 8, 12]. O sistema vincula automaticamente as metas de peso para cada idade[cite: 6, 8].
+2. **Validação de Amostragem na Coleta:**
+   - Exige um mínimo de 100 aves ou 1% do galpão para validar a pesagem[cite: 3, 6, 8].
+   - Impede o salvamento se faltar data ou ID do lote[cite: 2, 10].
+3. **Cálculos Zootécnicos Automáticos:**
+   - **Peso Médio e Desvio Padrão:** base do comportamento do galpão[cite: 2, 10].
+   - **Uniformidade do Lote (%):** proporção de aves situadas na faixa de tolerância de ±10% em torno da média[cite: 2, 3, 8]:
+
+$$\text{Uniformidade (\%)} = \left( \frac{\text{Aves com peso entre } 0{,}9 \times \bar{P} \text{ e } 1{,}1 \times \bar{P}}{\text{Total de aves pesadas}} \right) \times 100$$
+
+4. **Classificação do Lote:**
+   - Status imediato por cores e faixas: Excelente ($\ge 85\%$), Boa ($\ge 80\%$), Regular ($\ge 70\%$) ou Crítica ($< 70\%$)[cite: 3, 7].
+5. **Navegação em Tela Única:**
+   - As telas funcionam por botões[cite: 3, 10]. O VBA oculta as abas secundárias (`xlSheetVeryHidden`) para proteger os dados das linhagens contra alterações acidentais[cite: 2, 5, 10, 12].
+6. **Histórico Acumulado:**
+   - As pesagens salvas alimentam uma base contínua com formatação padronizada, pronta para auditorias ou conexão com Power BI[cite: 2, 10].
+
+---
+
+## 📂 Organização dos Scripts VBA (Pasta `/src`)
+
+Para quem quiser ver o código-fonte sem precisar baixar a planilha, as macros estão separadas em:
+
+* **[`src/GestaoLotesEPesagens.bas`](./src/GestaoLotesEPesagens.bas):** cadastro de lotes e validação das pesagens semanais[cite: 2, 12].
+* **[`src/NavegacaoSistema.bas`](./src/NavegacaoSistema.bas):** rotina de navegação entre as telas e controle de visibilidade das abas[cite: 5, 10].
+* **[`src/ConfiguracoesEAdmin.bas`](./src/ConfiguracoesEAdmin.bas):** gerador da interface de parâmetros e rotina de limpeza de dados com senha de segurança[cite: 3, 11].
+
+---
+
+## 🚀 Como testar a planilha
+
+1. Baixe o arquivo [`app/Automacao_Uniformidade_Aves.xlsm`](./app/Automacao_Uniformidade_Aves.xlsm).
+2. Abra no Excel e clique em **Habilitar Conteúdo** (Habilitar Macros).
+3. Na tela de início, clique em **NOVO LOTE** para preencher os dados do lote[cite: 8, 10].
+4. Em **NOVA COLETA**, digite os pesos de balança na coluna E[cite: 2, 8, 10].
+5. Clique em **CHECAR RESULTADOS E SALVAR** para enviar os dados ao histórico e abrir o **PAINEL DE CONTROLE**[cite: 2, 8].
