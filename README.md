@@ -6,16 +6,15 @@ Ferramenta desenvolvida em **Excel e VBA** para automatizar a pesagem semanal, c
 
 ## 🎯 Por que esta planilha foi criada?
 
-Na rotina da granja, a pesagem semanal costuma ser anotada em pranchetas ou planilhas sem travas de validação. Isso gera erros de digitação, amostras insuficientes e demora para calcular indicadores básicos como desvio padrão e CV%. 
+Durante a minha experiência técnica na produção comercial de postura, acompanhei semanalmente o desenvolvimento e o crescimento de pintainhas, realizando a pesagem e a avaliação da uniformidade dos lotes ao longo de toda a fase de cria e recria.
 
-Além disso, lotes desuniformes exigem ação rápida no arraçoamento e ambiência antes que a conversão alimentar ou a curva de postura sejam prejudicadas.
+Na rotina de campo, identifiquei a ausência de uma ferramenta prática que integrasse três necessidades fundamentais:
 
-Esta ferramenta foi feita para resolver esse gargalo:
-- O operador digita o peso individual e a planilha valida se a amostragem atingiu o mínimo representativo.
-- Os cálculos de uniformidade (faixa de ±10%) e médias saem na hora.
-- Os dados são salvos em um histórico geral estruturado para futuras análises.
-- A tela esconde as abas de retaguarda para não deixar fórmulas expostas a cliques acidentais.
+* **Validação e cálculo imediato:** Reduzir o tempo gasto no processamento manual das pesagens e no cálculo dos índices de uniformidade ($\pm 10\%$).
+* **Comparação direta com o padrão genético:** Cruzar o peso real das aves com as curvas oficiais dos manuais de linhagens comerciais de forma automática.
+* **Rastreabilidade e série temporal:** Manter um histórico acumulado das pesagens anteriores, permitindo avaliar não apenas o lote ativo, mas a evolução temporal do galpão entre ciclos.
 
+Esta aplicação foi desenvolvida exatamente para suprir esse gargalo operacional, transformando anotações isoladas num banco de dados estruturado para suporte técnico e tomada de decisão rápida.
 ---
 
 ## 📸 Demonstração da Planilha
