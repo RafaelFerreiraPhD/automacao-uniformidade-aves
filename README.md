@@ -68,14 +68,13 @@ Para consulta do código-fonte diretamente no repositório, as macros estão est
 * **[`src/ConfiguracoesEAdmin.bas`](./src/ConfiguracoesEAdmin.bas):** layout da tela de parâmetros e rotina de sanitização com senha de segurança.
 
 ---
-
 ## Acesso à Ferramenta & Contacto
 
 Por motivos de controlo de versão e proteção da estrutura do projeto, o ficheiro executável com as macros ativas (`.xlsm`) é disponibilizado diretamente mediante solicitação profissional.
 
 Para solicitar uma cópia de demonstração ou tirar dúvidas sobre a implementação técnica da ferramenta:
 
-* **E-mail:** [seu-email@dominio.com](ferreirafaelfer@gmail.com)
-* **LinkedIn:** [linkedin.com/in/o-seu-perfil]([https://www.linkedin.com/in/o-seu-perfil](https://www.linkedin.com/in/rafaeldesousaferreira/?isSelfProfile=true))
+* **E-mail:** [ferreirafaelfer@gmail.com]
+* **LinkedIn:** [https://www.linkedin.com/in/rafaeldesousaferreira/?isSelfProfile=true]
 
 O código-fonte integral das rotinas de automação e validação permanece aberto para auditoria e consulta técnica na pasta [`/src`](./src).
