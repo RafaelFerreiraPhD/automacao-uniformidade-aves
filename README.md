@@ -40,22 +40,22 @@ Esta aplicação foi desenvolvida exatamente para suprir esse gargalo operaciona
 ## O que a ferramenta faz
 
 1. **Cadastro do Lote:**
-   - Registra data de alojamento, categoria (corte ou postura) e linhagem[cite: 8, 12]. O sistema vincula automaticamente as metas de peso para cada idade[cite: 6, 8].
+   - Registra data de alojamento, categoria (corte ou postura) e linhagem. O sistema vincula automaticamente as metas de peso para cada idade.
 2. **Validação de Amostragem na Coleta:**
-   - Exige um mínimo de 100 aves ou 1% do galpão para validar a pesagem[cite: 3, 6, 8].
-   - Impede o salvamento se faltar data ou ID do lote[cite: 2, 10].
+   - Exige um mínimo de 100 aves ou 1% do galpão para validar a pesagem.
+   - Impede o salvamento se faltar data ou ID do lote.
 3. **Cálculos Zootécnicos Automáticos:**
-   - **Peso Médio e Desvio Padrão:** base do comportamento estatístico do galpão[cite: 2, 10].
-   - **Uniformidade do Lote (%):** proporção de aves situadas na faixa de tolerância de $\pm 10\%$ em torno da média[cite: 2, 3, 8]:
+   - **Peso Médio e Desvio Padrão:** base do comportamento estatístico do galpão.
+   - **Uniformidade do Lote (%):** proporção de aves situadas na faixa de tolerância de $\pm 10\%$ em torno da média:
 
 $$\text{Uniformidade (\%)} = \left( \frac{\text{Aves com peso entre } 0{,}9 \times \bar{P} \text{ e } 1{,}1 \times \bar{P}}{\text{Total de aves pesadas}} \right) \times 100$$
 
 4. **Classificação do Lote:**
-   - Diagnóstico imediato por faixas de corte: Excelente ($\ge 85\%$), Boa ($\ge 80\%$), Regular ($\ge 70\%$) ou Crítica ($< 70\%$)[cite: 3, 7].
+   - Diagnóstico imediato por faixas de corte: Excelente ($\ge 85\%$), Boa ($\ge 80\%$), Regular ($\ge 70\%$) ou Crítica ($< 70\%$).
 5. **Navegação em Tela Única:**
-   - Transição entre telas controlada por rotinas VBA[cite: 3, 10]. As abas secundárias permanecem ocultas (`xlSheetVeryHidden`) para proteger bases de dados e fórmulas contra alterações acidentais[cite: 2, 5, 10, 12].
+   - Transição entre telas controlada por rotinas VBA. As abas secundárias permanecem ocultas (`xlSheetVeryHidden`) para proteger bases de dados e fórmulas contra alterações acidentais.
 6. **Histórico Acumulado:**
-   - As pesagens salvas alimentam uma base contínua com formatação padronizada, estruturada para auditorias técnicas ou conexão com ferramentas de Business Intelligence[cite: 2, 10].
+   - As pesagens salvas alimentam uma base contínua com formatação padronizada, estruturada para auditorias técnicas ou conexão com ferramentas de Business Intelligence.
 
 ---
 
@@ -63,9 +63,9 @@ $$\text{Uniformidade (\%)} = \left( \frac{\text{Aves com peso entre } 0{,}9 \tim
 
 Para consulta do código-fonte diretamente no repositório, as macros estão estruturadas em:
 
-* **[`src/GestaoLotesEPesagens.bas`](./src/GestaoLotesEPesagens.bas):** cadastro de lotes e validação de pesagens semanais[cite: 2, 12].
-* **[`src/NavegacaoSistema.bas`](./src/NavegacaoSistema.bas):** controle de navegação e visibilidade dinâmica das abas[cite: 5, 10].
-* **[`src/ConfiguracoesEAdmin.bas`](./src/ConfiguracoesEAdmin.bas):** layout da tela de parâmetros e rotina de sanitização com senha de segurança[cite: 3, 11].
+* **[`src/GestaoLotesEPesagens.bas`](./src/GestaoLotesEPesagens.bas):** cadastro de lotes e validação de pesagens semanais.
+* **[`src/NavegacaoSistema.bas`](./src/NavegacaoSistema.bas):** controle de navegação e visibilidade dinâmica das abas.
+* **[`src/ConfiguracoesEAdmin.bas`](./src/ConfiguracoesEAdmin.bas):** layout da tela de parâmetros e rotina de sanitização com senha de segurança.
 
 ---
 
@@ -73,6 +73,6 @@ Para consulta do código-fonte diretamente no repositório, as macros estão est
 
 1. Baixe o arquivo binário na pasta [`app/Automacao_Uniformidade_Aves.xlsm`](./app/Automacao_Uniformidade_Aves.xlsm).
 2. Abra a pasta de trabalho no Microsoft Excel e selecione **Habilitar Conteúdo** (Habilitar Macros).
-3. Na tela de início, acesse **NOVO LOTE** para registrar as informações do lote alojado[cite: 8, 10].
-4. Em **NOVA COLETA**, informe os pesos individuais das aves na coluna E[cite: 2, 8, 10].
-5. Clique em **CHECAR RESULTADOS E SALVAR** para consolidar os dados no histórico e atualizar os gráficos no **PAINEL DE CONTROLE**[cite: 2, 8].
+3. Na tela de início, acesse **NOVO LOTE** para registrar as informações do lote alojado.
+4. Em **NOVA COLETA**, informe os pesos individuais das aves na coluna E.
+5. Clique em **CHECAR RESULTADOS E SALVAR** para consolidar os dados no histórico e atualizar os gráficos no **PAINEL DE CONTROLE**.
