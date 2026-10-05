@@ -21,6 +21,15 @@ Esta aplicação foi desenvolvida exatamente para suprir esse gargalo operaciona
 
 <div align="center">
 
+## 📸 Demonstração da Planilha
+
+<div align="center">
+
+### Menu Principal & Navegação
+<img src="./img/inicio_ferramentas.png" alt="Tela Inicial e Ferramentas" width="850">
+
+<br><br>
+
 ### Painel de Controle (Resultados e Curvas)
 <img src="./img/painel_controle.png" alt="Painel de Controle" width="850">
 
