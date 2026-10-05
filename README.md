@@ -1,10 +1,10 @@
-# 🐔 Automação Zootécnica: Monitoramento de Uniformidade e Crescimento de Aves
+# Automação Zootécnica: Monitoramento de Uniformidade e Crescimento de Aves
 
 Ferramenta desenvolvida em **Excel e VBA** para automatizar a pesagem semanal, checagem de regras de amostragem no galpão, cálculo de uniformidade e comparação com as curvas dos manuais de linhagens.
 
 ---
 
-## 🎯 Por que esta planilha foi criada?
+## Por que esta planilha foi criada?
 
 Durante a minha experiência técnica na produção comercial de postura, acompanhei semanalmente o desenvolvimento e o crescimento de pintainhas, realizando a pesagem e a avaliação da uniformidade dos lotes ao longo de toda a fase de cria e recria.
 
@@ -17,11 +17,11 @@ Na rotina de campo, identifiquei a ausência de uma ferramenta prática que inte
 Esta aplicação foi desenvolvida exatamente para suprir esse gargalo operacional, transformando anotações isoladas num banco de dados estruturado para suporte técnico e tomada de decisão rápida.
 ---
 
-## 📸 Demonstração da Planilha
+## Demonstração da Planilha
 
 <div align="center">
 
-## 📸 Demonstração da Planilha
+## Demonstração da Planilha
 
 <div align="center">
 
