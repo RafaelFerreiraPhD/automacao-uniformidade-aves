@@ -69,10 +69,13 @@ Para consulta do código-fonte diretamente no repositório, as macros estão est
 
 ---
 
-## Instruções de Uso
+## Acesso à Ferramenta & Contacto
 
-1. Baixe o arquivo binário na pasta [`app/Automacao_Uniformidade_Aves.xlsm`](./app/Automacao_Uniformidade_Aves.xlsm).
-2. Abra a pasta de trabalho no Microsoft Excel e selecione **Habilitar Conteúdo** (Habilitar Macros).
-3. Na tela de início, acesse **NOVO LOTE** para registrar as informações do lote alojado.
-4. Em **NOVA COLETA**, informe os pesos individuais das aves na coluna E.
-5. Clique em **CHECAR RESULTADOS E SALVAR** para consolidar os dados no histórico e atualizar os gráficos no **PAINEL DE CONTROLE**.
+Por motivos de controlo de versão e proteção da estrutura do projeto, o ficheiro executável com as macros ativas (`.xlsm`) é disponibilizado diretamente mediante solicitação profissional.
+
+Para solicitar uma cópia de demonstração ou tirar dúvidas sobre a implementação técnica da ferramenta:
+
+* **E-mail:** [seu-email@dominio.com](ferreirafaelfer@gmail.com)
+* **LinkedIn:** [linkedin.com/in/o-seu-perfil]([https://www.linkedin.com/in/o-seu-perfil](https://www.linkedin.com/in/rafaeldesousaferreira/?isSelfProfile=true))
+
+O código-fonte integral das rotinas de automação e validação permanece aberto para auditoria e consulta técnica na pasta [`/src`](./src).
